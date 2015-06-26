@@ -1,0 +1,108 @@
+<section class="form_full background-01 container" layout="column">
+
+	<form class="form-signup .md-whiteframe-z5" name="register" ng-submit="vm.submit()" novalidate>
+		<div class="form-heading">
+			<h1>
+				Register
+			</h1>
+		</div>
+		<md-content md-theme="form-dark" layout-padding layout="row" layout-sm="column">
+		    <md-input-container flex>
+		      <label>Title</label>
+		      <input ng-model="user.title">
+		    </md-input-container>
+		    <md-input-container flex>
+		      <label>Email</label>
+		      <input ng-model="user.email" type="email">
+		    </md-input-container>
+		  </md-content>
+		  <md-content layout-padding>
+		      <div layout layout-sm="column">
+		        <md-input-container flex>
+		            <label>Company</label>
+		            <input ng-model="user.company">
+		          </md-input-container>
+		      </div>
+		      <div layout layout-sm="column">
+		        <md-input-container flex>
+		          <label>First name</label>
+		          <input ng-model="user.firstName">
+		        </md-input-container>
+		        <md-input-container flex>
+		          <label>Last Name</label>
+		          <input ng-model="theMax">
+		        </md-input-container>
+		      </div>
+		      <md-input-container flex>
+		        <label>Address</label>
+		        <input ng-model="user.address">
+		      </md-input-container>
+		        <md-input-container flex>
+		          <label>City</label>
+		          <input ng-model="user.city">
+		        </md-input-container>
+		       <div layout layout-sm="column">
+		      	<md-input-container class="md-icon-float" flex>
+			      <label>Password</label>
+			      <md-icon md-svg-icon="img/icons/ic_person_24px.svg"></md-icon>
+			      <input ng-model="vm.loginData.email" type="email">
+			    </md-input-container>
+			    <md-input-container class="md-icon-float" flex>
+			      <label>Confirm Password</label>
+			      <md-icon md-svg-icon="img/icons/ic_person_24px.svg"></md-icon>
+			      <input ng-model="vm.loginData.email" type="email">
+			    </md-input-container>
+			    <p class="help-block text-center" ng-show="register.password_confirm.$dirty && register.password_confirm.$error.equal">passwords do not match</p>
+		      </div>
+		  </md-content>
+		  <md-button class="md-button md-raised md-primary">Submit</md-button>
+	</form>
+</section>
+
+
+<!-- <form class="form-signup signup" name="register" ng-submit="vm.submit()" novalidate>
+		    <div class="form-heading">
+				<h1>
+					Register
+				</h1>
+			</div>
+	    	<md-content layout="row" layout-sm="column" layout-padding>
+			    <md-input-container class="md-icon-float" required>
+			      <label>First Name</label>
+			      <md-icon md-svg-icon="img/icons/ic_person_24px.svg"></md-icon>
+			      <input ng-model="vm.loginData.email" type="email">
+			    </md-input-container>
+			    <md-input-container class="md-icon-float" required>
+			      <label>Last Name</label>
+			      <md-icon md-svg-icon="img/icons/ic_person_24px.svg"></md-icon>
+			      <input ng-model="vm.loginData.email" type="email">
+			    </md-input-container>
+		    </md-content>
+		    <md-input-container class="md-icon-float" required>
+		      <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon>
+		      <input ng-model="user.phone" type="text" placeholder="Password">
+		    </md-input-container>
+		    <md-input-container class="md-icon-float" required>
+		      <label>Email</label>
+		      <md-icon md-svg-icon="img/icons/ic_person_24px.svg"></md-icon>
+		      <input ng-model="vm.loginData.email" type="email">
+		    </md-input-container>
+
+		    <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">please enter a proper email</p>
+
+		    <md-input-container class="md-icon-float" required>
+		      <label>Password</label>
+		      <md-icon md-svg-icon="img/icons/ic_person_24px.svg"></md-icon>
+		      <input ng-model="vm.loginData.email" type="email">
+		    </md-input-container>
+		    <md-input-container class="md-icon-float" >
+		      <label>Confirm Password</label>
+		      <md-icon md-svg-icon="img/icons/ic_person_24px.svg"></md-icon>
+		      <input ng-model="vm.loginData.email" type="email">
+		    </md-input-container>
+		    <p class="help-block text-center" ng-show="register.password_confirm.$dirty && register.password_confirm.$error.equal">passwords do not match</p>
+
+		    <md-button class="md-button md-primary" ng-disabled='register.$invalid' type="submit">
+				Submit
+			</md-button>
+		</form> -->

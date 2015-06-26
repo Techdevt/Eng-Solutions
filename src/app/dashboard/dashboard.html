@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="col-sm-3 col-md-2">
+        <div data-ng-include="'/scripts/layout/sidebar.html'"></div>
+    </div>
+    <section class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2" id="main">
+  <div ng-show="$location === '/dashboard'" ng-class="shuffle-animation">
+    <div class="txt-center">
+    <div class="profile-block">
+        <img class="profile-img" src="./img/default.png"/>
+        <h4>{{user.name || user.username}}</h4>
+        <p class="profile-bio">
+            {{user.description || user.fname + ' ' + user.lname}}
+          </p>
+
+        <p class="profile-bio">
+            {{user.address}}
+        </p>
+
+        <p class="profile-bio">
+            {{user.location}}
+          </p>
+
+        <p class="profile-bio">
+            {{user.email}}
+        </p>
+
+        <p class="profile-bio">
+            {{user.phone}}
+        </p>
+
+        <p class="profile-bio">
+            <a href="{{user.website}}" target="_blank">{{user.website}}</a>
+          </p>
+      </div>
+      </div>
+  </div>
+    
+        <div data-ui-view class="shuffle-animation"></div>
+    </section>
+</div>
+

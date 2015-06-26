@@ -1,0 +1,501 @@
+@import 'include-media';
+
+$padding: 20px;
+
+::selection {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #212121;
+    font-size: 16px;
+    min-height: 100%;
+}
+
+p {
+    color: #212121;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+a {
+    color: #6ab344;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+[layout-fill] {
+  height: 100% !important;
+  position: absolute;
+}
+
+md-toolbar{
+    min-height: 56px;
+}
+
+.md-toolbar-tools {
+    max-height: 80px;
+    &.header {
+        height: 80px;
+        left: 0;
+        position: fixed;
+        top: 0;
+        -webkit-transition: box-shadow .25s cubic-bezier(1,0,0,1);
+        transition: box-shadow .25s cubic-bezier(1,0,0,1);
+        width: 100%;
+        z-index: 11;
+
+        .md-icon-button {
+            svg {
+                /*fill: #757575;*/
+                fill: #FFF;
+            }
+        }  
+
+        @include media('<=849px'){
+          -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.35);
+          box-shadow: 0 1px 6px rgba(0,0,0,.35);
+          height: 56px;
+        } 
+
+        @include media('>849px', '<=2500px'){
+          height: 80px;
+        } 
+    }
+}
+
+md-menu-item > .md-button {
+    display: inline;
+}
+
+.md-scroll-mask {
+  z-index: 0 !important;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    
+    display: inline-block;
+    outline: none;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.md-toolbar-tools.header ul li {
+    list-style: none;
+    margin: 0 1px;
+}
+
+.md-toolbar-tools.header ul li a {
+    font-weight: 500;
+    font-size: 14px;
+    /*color: #757575;*/
+    color: #FFF;
+    height: 80px;
+    display: block;
+    outline: none;
+    text-transform: uppercase;
+    line-height: 24px;
+    border-bottom: 4px solid transparent;
+    padding: 32px 16px 20px 16px;
+    transition: all ease-in 0.15s;
+    webkit-transition: all ease-in 0.15s;
+}
+
+.md-toolbar-tools.header ul li .md-button {
+    margin-top: 20px;
+}
+
+md-sidenav-left.left-navigation {
+    .md-toolbar-tools span h1 {
+        color: #757575;
+    }
+}
+
+md-sidenav {
+    z-index: 1200;
+    md-toolbar {
+        .md-toolbar-tools h1 {
+            font-weight: 400;
+            padding: 20px 0;
+        }
+        height: 128px;
+    }
+    ul {
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 0;
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                display: block;
+                padding: 30px;
+                text-transform: uppercase;
+                color: #757575;
+                &:hover {
+                    background-color: #BDBDBD;
+                }
+            }
+        }
+    }
+}
+
+.md-toolbar-tools.header ul li a:hover,
+.md-toolbar-tools.header ul li a.active {
+    /*color: #2196F3;*/
+    /*border-bottom: 4px solid #2196F3;*/
+    border-bottom: 4px solid #FFF;
+}
+
+.md-toolbar-tools h1 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: inherit;
+}
+
+.padding{
+    padding: $padding;
+}
+
+.content.ng-scope {
+    min-height: 100% !important;
+    height: 100%;
+    /*margin-top: 80px;*/
+    position: relative;
+
+    @include media('<=849px'){
+      padding-top: 56px;
+    }
+    @include media('>=850px'){
+      padding-top: 80px;
+    }
+}
+
+section.main{
+    min-height: calc(100vh - 233px);
+    /*padding-top: 80px;*/
+    @include media('<=849px'){
+        /*padding-top: 56px;*/
+    }
+}
+
+section.main .js-slideshow {
+    background: #fafafa;
+}
+
+section.main .js-slideshow .js-gallery {
+    .wrapper {
+        position: relative;
+        .banner {
+            background: #A3C16B;
+            position: relative;
+            width: 100%;
+  
+            .banner-image--container {
+                position: relative;
+                overflow: hidden;
+                z-index: 3;
+                @include media('<1044px') {
+                    height: auto;
+                }
+                @include media('>=1044px') {
+                    height: 650px;
+                }
+                @include media('>=1600px'){
+                  height: 800px;
+                }
+            }
+
+            .banner-image-carousel {
+                opacity: 1;
+
+                @include media('>=1044px'){
+                  height: 550px;
+                }
+
+                @include media('>=1600px'){
+                  height: 800px;
+                }
+            }
+
+            .banner-image {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding-bottom: 45%;
+                position: relative;
+                z-index: 1;
+                @include media('<768px') {
+                    padding-bottom: 90%;
+                }
+
+                @include media('>=768px', '<1044px'){
+                    padding-bottom: 51%;
+                }
+
+                @include media('>=1044px', '<1600px'){
+                      padding-bottom: 53%;
+                }
+
+                @include media('>=1600px', '<=2500px'){
+                      padding-bottom: 36%;
+                  }
+
+                .slideshow {
+                    height: 100%;
+                    .slideshow-item {
+                        opacity: 0;
+                        position: absolute;
+                        -webkit-transition: opacity .75s ease-in-out;
+                        transition: opacity .75s ease-in-out;
+                        width: 100%;
+                        z-index: 1;
+
+                        &.is-active{
+                          opacity: 1;
+                          z-index: 3;
+                        }
+
+                    }
+                    .absolute-img {
+                        background: #A3C16B;
+                    }
+                }
+            }
+
+            @include media('>=1044px'){
+              overflow: hidden;
+            }
+        }
+    }
+}
+
+.banner-absolute-image {
+    display: block;
+    height: 550px;
+    margin: 0 auto;
+    width: auto;
+    z-index: 4;
+
+    @include media("<=640px") {
+        background-size: contain;
+        height: auto;
+        padding-bottom: 77%;
+    }
+
+    @include media('>=768px', '<1020px'){
+      height: auto;
+      background-size: contain;
+      padding-bottom: 51%;
+    }
+
+    @include media('>=1020px', '<1044px'){
+      height: auto;
+      background-size: contain;
+      padding-bottom: 50%;
+    }
+
+    @include media('>=1600px'){
+      height: 800px;
+    }
+
+
+
+}
+
+.banner-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 66.66667%;
+    position: relative;
+    z-index: 1;
+}
+
+section.main div.js-gallery-controls {
+    padding: 24px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #fff;
+
+    @include media('<768px'){
+      padding: 6px 0;
+    }
+
+    .md-button.md-icon-button {
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        line-height: 28px;
+        outline: none;
+    }
+
+    .md-icon-button > md-icon {
+        svg {
+            fill: #757575;
+        }
+    }
+
+    .fill-circle{
+      background-color: rgb(220, 220, 220);
+      margin: 0 12px;
+      height: 10px;
+      width: 10px;
+      border-radius: 8px;
+      text-align: center;
+      transition: all ease-in 0.5s;
+      -webkit-transition: all ease-in 0.5s;
+      -moz-transition: all ease-in 0.5s;
+      vertical-align: middle;
+      cursor: pointer;
+      outline: none;
+
+      @include media('>=768px'){
+        width: 16px;
+        height: 16px;
+        border-radius: 12px;
+        margin: 0 20px;
+      }
+
+      &.active{
+        background-color: #42A5F5;
+      }
+    }
+}
+
+.header-fab{
+    position: absolute;
+    right: 20%;
+    bottom: -28px;
+    -webkit-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    transform: scale(0,0);
+    -webkit-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+
+    @include media('<=768px'){
+        display: none;
+    }
+}
+
+
+.floating-action--large{
+    border-radius: 28px;
+    height: 56px;
+    width: 56px;
+    background-color: #64ffda;
+    cursor: pointer;
+    text-align: center;
+    z-index: 10;
+
+    .md-icon-button > md-icon {
+        svg {
+            fill: #212121;
+        }
+    }
+}
+
+.floating-action--large:before{
+    background: transparent;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+.banner-slide1{
+
+    @include media('<=640px'){
+      /*background: url('../assets/solar-images-cc/smart-house@640.jpg') center 170% no-repeat;*/
+      background-size: cover !important;
+      background-color: #f3f3f3 !important
+    }
+
+    @include media('>640px', '<768px'){
+      /*background: url('../assets/solar-images-cc/smart-house@768.jpg') center 0 no-repeat;*/
+      background-size: contain !important;
+      background-color: #f3f3f3 !important
+    }
+
+    @include media('>=768px', '<1020px'){
+      /*background: url('../assets/solar-images-cc/smart-house@1024.jpg') center 0 no-repeat;*/
+      background-size: contain !important;
+      background-color: #f3f3f3 !important
+    }
+
+    @include media('>=1020px', '<1043px'){
+      /*background: url('../assets/solar-images-cc/smart-house@1024.jpg') center no-repeat;*/
+      background-size: contain !important;
+      background-color: #f3f3f3 !important
+    }
+
+    @include media('>=1043px', '<1700px'){
+      /*background: url('../assets/solar-images-cc/smart-house@1600.jpg') center no-repeat;*/
+      background-size: contain !important;
+      background-color: #f3f3f3 !important
+    }
+
+    @include media('>=1600px'){
+      /*background: url('../assets/solar-images-cc/smart-house@2200.jpg') center 90% no-repeat;*/
+      background-size: cover !important;
+      background-color: #f3f3f3 !important;
+    }
+
+}
+
+.banner-slide2{
+  background: #7ed0e2 !important;
+}
+
+.form-input{
+border-radius: 3px;
+  border: 2px solid #d9d7d5;
+  box-sizing: border-box;
+  font-size: 1em;
+  padding: 0.625em;
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
+}
+
+md-menu-content{
+  padding: 0;
+}

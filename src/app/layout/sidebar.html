@@ -1,0 +1,16 @@
+<div id="nav" data-ng-controller="Sidebar as vm">
+  <div class="user-banner">
+  	<img ng-src="../assets/images/default.jpg"/>
+    <h5 class="username">{{user.name || user.username}}</h5>
+  </div>
+  <ul>
+    <li class="head">General</li>
+    <li
+        data-ng-repeat="r in vm.navRoutes track by $index">
+        <a ui-sref="{{r.name}}({ user: user.name || user.username})" ui-sref-active="active"
+           data-ng-bind-html="r.config.settings.content"></a>
+    </li>  
+  </ul>
+</div>
+
+

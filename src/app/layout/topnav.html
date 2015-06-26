@@ -1,0 +1,61 @@
+<md-button ng-click="toggleSidenav('left')" class="md-icon-button material-icons" ng-hide="shrink">
+    <md-icon md-svg-icon="{{src + '/navigation/svg/production/ic_menu_24px.svg'}}" aria-label="Menu" size="24"></md-icon>
+</md-button>
+<div class="md-toolbar-tools" layout="row" layout-align="space-around center">
+  <div layout="row">
+    <a ui-sref="landing.home">
+      <!-- <img src="./assets/images/logo.png"> -->
+      <h2>Eng-Solutions</h2>
+    </a>
+  </div>
+  <ul layout="row" ng-show="shrink">
+      <li>
+        <a ui-sref="landing.home" ui-sref-active="active">
+          Home
+        </a>
+      </li>
+      <li>
+        <a ui-sref="landing.about" ui-sref-active="active">
+          About Us
+        </a>
+      </li>
+      <li>
+        <a ui-sref="landing.contact" ui-sref-active="active">Contact</a>
+      </li>
+      <li>
+        <a ui-sref="landing.blog" ui-sref-active="active">
+          Blog
+        </a>
+      </li>
+      <li>
+        <form>
+          <md-button ng-click="" class="md-icon-button material-icons">
+            <md-icon md-svg-icon="{{src + '/action/svg/production/ic_search_24px.svg'}}" aria-label="Search" size="24"></md-icon>
+          </md-button>
+        </form>
+      </li>
+      <li>
+        <md-menu md-position-mode="target-right target">
+          <md-button ng-click="$mdOpenMenu()" class="md-icon-button material-icons">
+            <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+          </md-button>
+
+          <md-menu-content width="3">
+            <md-menu-item>
+              <md-button ng-click="goToUrl('login')">
+                <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                Login
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="goToUrl('signup')">
+                 <md-icon md-svg-icon="{{src + '/social/svg/production/ic_person_add_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                Register
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+
+        </md-menu>
+      </li>
+    </ul>
+</div>
