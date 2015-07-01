@@ -1,0 +1,134 @@
+@import 'include-media';
+
+.form_full{
+  position: relative;
+  width: 100%;
+  @include media('<=849px'){
+    min-height: calc(100vh - 56px);
+  } 
+
+  @include media('>=850px'){
+    min-height: calc(100vh - 80px);
+  }
+}
+
+.signup{
+  
+}
+
+.background-01{
+  background-color: #f7f7f7;
+}
+
+.form-login{ 
+ margin: 0 auto;
+ max-width: 500px;
+
+  @include media('<=768px'){
+    width: 100%;
+    max-width: 600px;
+  }
+  @include media('>768px','<=1200px'){
+    width: 60%;
+  }
+
+  @include media('>1200px'){
+    width: 30%;
+  }
+
+  md-content{
+     background: #f7f7f7;
+  }
+
+  .md-input{
+    background-color: #FFF;
+    border-bottom: 2px solid #d9d7d5;
+  }
+
+  .btn-login{
+    @include media('<600px'){
+      margin-top: 1.25em;
+    }
+
+    @include media('>=600px'){
+      margin-top: 2.5em;
+    }
+  }
+
+  .forgot{
+    color: #1E88E5;
+    font-size: 75%;
+    margin-left: 36px;
+  }
+
+  .lgi{
+    color: #aaa;
+    text-align: center;
+    padding-bottom: 1.25em;
+    border-bottom: 1px solid #e5e4e2;
+
+    a{
+      border-bottom: 2px solid #1E88E5;
+      color: #1E88E5;
+    }
+  }
+}
+
+
+.form-heading{
+  font-family: 'Open Sans', 'Lato', 'Roboto', Helvetica;
+  text-align: center;
+  line-height: 1.4;
+  h1{
+    font-size: 150%;
+    font-weight: 600;
+    color: #393d40;
+    margin: 0.67em 0;
+  }
+}
+
+.form-signup{
+  margin: 0 auto;
+  @include media('<=768px'){
+    width: 90%;
+  }
+
+  @include media('>768px','<=1044px'){
+    width: 50%;
+  }
+
+  @include media('>1044px'){
+    width: 30%;
+  }
+
+  md-content.md-form-dark-theme{
+    /*filter:alpha(opacity=60); 
+    -moz-opacity:0.6; 
+    opacity: 0.6; */
+    background: #424242;
+  }
+
+  .md-button{
+    padding: 0 40px;
+    display: block;
+    @include media('<=768px'){
+      margin: 10px auto;
+    }
+
+    @include media('>768px'){
+      margin: 20px auto;
+    }
+  }
+}
+
+.form-label{
+  display: block;
+  font-size: 85%;
+  font-weight: bold;
+  margin-bottom: 0.3125em;
+  color: #585a5b;
+}
+
+.btn-login{
+  margin: 0 auto;
+}

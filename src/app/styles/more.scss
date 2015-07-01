@@ -1,0 +1,67 @@
+@import 'include-media';
+
+section.main div.project-gallery{
+	position: relative;
+
+	.section-header{ 
+
+		.heading-2{
+			text-align: center;
+		}
+		
+	}
+
+	.gallery-container{
+		margin: 0 auto;
+		position: relative;
+		padding-bottom: 40px;
+
+		@include media('<=600px'){
+			max-width: 100%;
+			padding-bottom: 16px;
+		}
+
+		@include media('>600px', '<=1024px'){
+			max-width: 90%;
+		}
+
+		@include media('>1024px', '<=1400px'){
+			max-width: 80%;
+		}
+
+		@include media('>1400px', '<=1600px'){
+			max-width: 70%;
+		}
+
+		@include media('>1600px'){
+			max-width: 60%;
+		}
+
+		.card{
+		   @include media('<=600px'){
+		   	 margin: 8px 0;
+		   }
+		}
+
+		md-card-content{
+			.p-t{
+				color: #2196F3;
+			}
+
+			.md-icon-button > md-icon{
+				svg{
+					fill: #2196F3;
+				}
+			}
+
+			.project-more{
+				p{
+					color: #757575;
+					text-align: left;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,488 @@
+<section layout="column" class="main">
+    <div  class="js-slideshow">
+        <div class="js-gallery" layout="column">
+          <!-- code autoplay for first enter -->
+          <div class="wrapper">
+            <div class="banner js-animate-on-load">
+                <div class="banner-image--container banner-image-carousel" >
+                  <div class="banner-image">
+                    <div class="slideshow" loop-image-slides>
+                      <div class="slideshow-item absolute-img is-active" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0,0,0,0); backface-visibility: hidden; transform: matrix(1, 0, 0, 1, 0, 0);">
+                          <div class="banner-absolute-image banner-slide1">
+                            <div class="intro-header">
+                              <h1 class="main">
+                                <span class="greeting">Hi! We're</span>
+                                <span class="message">Eng-Solutions</span>
+                              </h1>
+                              <h1 class="sub">
+                                We take care of all your solar energy needs
+                              </h1>
+                              <div class="intro-btn">
+                                <md-button class="md-button button-raised md-primary md-whiteframe-z2">
+                                   <md-icon md-svg-icon="{{src + '/content/svg/production/ic_send_24px.svg'}}" aria-label="More" size="24"></md-icon>Hire Us
+                                </md-button>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="slideshow-item absolute-img" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0,0,0,0); backface-visibility: hidden; transform: matrix(1, 0, 0, 1, 0, 0);">
+                          <div class="banner-absolute-image banner-slide2"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="floating-action--large header-fab md-whiteframe-z2" style="transform: matrix(1,0,0,1,0,0)">
+              <md-button scroll-to="first-scroll" duration="1800" easing="easeInQuint" class="md-icon-button material-icons">
+                <md-icon md-svg-icon="{{src + '/navigation/svg/production/ic_expand_more_24px.svg'}}" aria-label="More" size="24"></md-icon>
+              </md-button>
+            </div>
+          </div>
+
+          <div layout="row" class="js-gallery-controls" layout-align="center center">
+              <md-button ng-click="previousChild()" class="md-icon-button material-icons">
+                <md-icon md-svg-icon="{{src + '/navigation/svg/production/ic_chevron_left_24px.svg'}}" aria-label="Menu" size="24"></md-icon>
+              </md-button>
+
+              <span class="fill-circle" ng-class="{'active' : currentIndex === $index}" ng-click="next($index)" ng-repeat="item in children"></span>
+
+              <md-button ng-click="nextChild()" class="md-icon-button .material-icons md-primary">
+                  <md-icon md-svg-icon="{{src + '/navigation/svg/production/ic_chevron_right_24px.svg'}}" aria-label="Menu" size="24"></md-icon>
+              </md-button>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="wrapper-above-products" id="first-scroll" layout="row" layout-align="start center">
+      <div class="section-header text-center">
+         <h2 class="heading-2">Our Products</h2>
+         <p class="text-center one-half">
+           Nulla vitae nulla rhoncus, tempus lectus in, ultricies ante. Fusce quam est, congue non dictum in, fringilla volutpat mauris. Suspendisse faucibus mauris at lorem aliquam vestibulum. 
+        </p>
+      </div>
+    </div>
+
+    <div class="products-wrapper" layout="column">
+      <div class="product-container">
+        <div class="products" layout="row"> 
+
+          <div class="product shade_wrap inverter">
+            <a class="product-img-link" href="./panel/">
+            <div class="product-img-wrap">
+              <div class="product-img">
+                <img class="grow" src="./assets/solar-images-cc/products/inverter.png"/>
+              </div>
+            </div>
+            <p class="text-button" href="#">
+              Inverters
+            </p>
+            </a>
+          </div>
+
+          <div class="product shade_wrap charge-controller">
+              <a class="product-img-link" href="./panel/">
+              <div class="product-img-wrap">
+                <div class="product-img">
+                  <img class="grow" src="./assets/solar-images-cc/products/charge-controller2.png"/>
+                </div>
+              </div>
+              <p class="text-button" href="#">
+                Charge Controllers
+              </p>
+              </a>
+            </div>
+
+            <div class="product shade_wrap panel">
+              <a class="product-img-link" href="./panel/">
+              <div class="product-img-wrap">
+                <div class="product-img">
+                  <img class="grow" src="./assets/solar-images-cc/products/panel.png"/>
+                </div>
+              </div>
+              <p class="text-button" href="#">
+                Solar Panels
+              </p>
+              </a>
+            </div>
+
+            <div class="product shade_wrap battery">
+              <a class="product-img-link" href="./panel/">
+              <div class="product-img-wrap">
+                <div class="product-img">
+                  <img class="grow" src="./assets/solar-images-cc/products/battery.png"/>
+                </div>
+              </div>
+              <p class="text-button" href="#">
+                Batteries
+              </p>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- <div class="customer-services">
+      <div class="section-header">
+        <h2 class="heading-2">
+          What makes Eng-Solution Unique
+        </h2>
+        <p>
+          Nulla vitae nulla rhoncus, tempus lectus in, ultricies ante. Fusce quam est, congue non dictum in, fringilla volutpat mauris. Suspendisse faucibus mauris at lorem aliquam vestibulum. 
+        </p>
+        <p>
+          <a href="#">Read More...</a>
+        </p>
+      </div><img alt="" class="customer-services-image" src="./assets/solar-images-cc/content.jpg">
+      </div> -->
+    
+
+    <div class="project-gallery">
+      <div class="section-header">
+        <h2 class="heading-2">
+          Project Gallery
+        </h2>
+      </div>
+      <div class="gallery-container" layout="row" layout-wrap layout-align="space-around center">
+        <div flex-gt-lg="33" flex-lg="45" flex-gt-sm="50" flex-sm="100">
+          <md-card class="card">
+            <div class="card-image">
+              <img alt="" class="top-radius" src="./assets/images/projects/project1.jpg">
+            </div>
+            <md-card-content>
+              <div class="title-bar" layout="row" layout-align="space-between center">
+                  <span class="p-t">Project 1</span>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button material-icons" ng-click="$mdOpenMenu()">
+                      <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option1
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option2
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                  </md-menu>
+              </div>
+              <div class="project-more">
+                 <p>More About Project 1</p>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div flex-gt-lg="33" flex-lg="45" flex-gt-sm="50" flex-sm="100">
+          <md-card class="card">
+            <div class="card-image">
+              <img alt="" class="top-radius" src="./assets/images/projects/project2.jpg">
+            </div>
+            <md-card-content>
+              <div class="title-bar" layout="row" layout-align="space-between center">
+                  <span class="p-t">Project 2</span>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button material-icons" ng-click="$mdOpenMenu()">
+                      <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option1
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option2
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                  </md-menu>
+              </div>
+              <div class="project-more">
+                 <p>More About Project 2</p>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div flex-gt-lg="33" flex-lg="45" flex-gt-sm="50" flex-sm="100">
+          <md-card class="card">
+            <div class="card-image">
+              <img alt="" class="top-radius" src="./assets/images/projects/project3.jpg">
+            </div>
+            <md-card-content>
+              <div class="title-bar" layout="row" layout-align="space-between center">
+                  <span class="p-t">Project 3</span>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button material-icons" ng-click="$mdOpenMenu()">
+                      <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option1
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option2
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                  </md-menu>
+              </div>
+              <div class="project-more">
+                 <p>More About Project 3</p>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div flex-gt-lg="33" flex-lg="45" flex-gt-sm="50" flex-sm="100">
+          <md-card class="card">
+            <div class="card-image">
+              <img alt="" class="top-radius" src="./assets/images/projects/project4.jpg">
+            </div>
+            <md-card-content>
+              <div class="title-bar" layout="row" layout-align="space-between center">
+                  <span class="p-t">Project 4</span>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button material-icons" ng-click="$mdOpenMenu()">
+                      <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option1
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option2
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                  </md-menu>
+              </div>
+              <div class="project-more">
+                 <p>More About Project 4</p>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div flex-gt-lg="33" flex-lg="45" flex-gt-sm="50" flex-sm="100">
+          <md-card class="card">
+            <div class="card-image">
+              <img alt="" class="top-radius" src="./assets/images/projects/project5.jpg">
+            </div>
+            <md-card-content>
+              <div class="title-bar" layout="row" layout-align="space-between center">
+                  <span class="p-t">Project 5</span>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button material-icons" ng-click="$mdOpenMenu()">
+                      <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option1
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option2
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                  </md-menu>
+              </div>
+              <div class="project-more">
+                 <p>More About Project 5</p>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div flex-gt-lg="33" flex-lg="45" flex-gt-sm="50" flex-sm="100">
+          <md-card class="card">
+            <div class="card-image">
+              <img alt="" class="top-radius" src="./assets/images/projects/project6.jpg">
+            </div>
+            <md-card-content>
+              <div class="title-bar" layout="row" layout-align="space-between center">
+                  <span class="p-t">Project 6</span>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button material-icons" ng-click="$mdOpenMenu()">
+                      <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option1
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option2
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                  </md-menu>
+              </div>
+              <div class="project-more">
+                 <p>More About Project 6</p>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+      </div>
+
+    <div class="contact" layout="column" layout-align="center">
+      <div class="section-header">
+         <h2 class="heading-2">Contact</h2>
+         <p class="one-full">
+           Sakaman (Blue-Lagoon) - Accra, Ghana.
+        </p>
+
+        <p class="one-full">
+           + 233248052950 | engSolutions@gmail.com | www.engsolutions.com
+        </p>
+      </div>
+      <div class="contact-container" layout="row" layout-wrap layout-align="space-around center">
+        <div class="gps-location" flex-gt-lg="60" flex-lg="50" flex-gt-sm="100" flex-sm="100">
+          
+        </div>
+        <div class="contact-form-wrapper md-whiteframe-z3"  flex-gt-lg="30" flex-lg="30" flex-gt-sm="100" flex-sm="100">
+          <div class="contact-form">
+            <form ng-submit="vm.submit()" novalidate>
+                <md-content layout-padding>
+                    <div layout layout-sm="column">
+                      <md-input-container flex>
+                          <label>Name</label>
+                          <input ng-model="user.name">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-sm="column">
+                      <md-input-container flex>
+                          <label>Email</label>
+                          <input ng-model="user.email">
+                        </md-input-container>
+                    </div>
+                    <div layout layout-sm="column">
+                      <md-input-container flex>
+                          <label>Subject</label>
+                          <input ng-model="user.name">
+                        </md-input-container>
+                    </div>
+                    <md-input-container flex>
+                      <label>Message</label>
+                      <input ng-model="user.address">
+                    </md-input-container>
+                </md-content>
+                <md-button class="md-button md-primary">Send Message</md-button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>  
+
+    <div class="project-gallery">
+      <div class="section-header">
+        <h2 class="heading-2">
+          Blog
+        </h2>
+      </div>
+      <div class="gallery-container" layout="row" layout-wrap layout-align="space-around center">
+        <div flex-gt-lg="33" flex-lg="45" flex-gt-sm="50" flex-sm="100">
+          <md-card class="card">
+            <div class="card-image">
+              <img alt="" class="top-radius" src="./assets/images/projects/project1.jpg">
+            </div>
+            <md-card-content>
+              <div class="title-bar" layout="row" layout-align="space-between center">
+                  <span class="p-t">How Solar Works</span>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button material-icons" ng-click="$mdOpenMenu()">
+                      <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option1
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option2
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                  </md-menu>
+              </div>
+              <div class="project-more">
+                 <p>More About Project 1</p>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div flex-gt-lg="33" flex-lg="45" flex-gt-sm="50" flex-sm="100">
+          <md-card class="card">
+            <div class="card-image">
+              <img alt="" class="top-radius" src="./assets/images/projects/project2.jpg">
+            </div>
+            <md-card-content>
+              <div class="title-bar" layout="row" layout-align="space-between center">
+                  <span class="p-t">Introduction to Biogas Production</span>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button material-icons" ng-click="$mdOpenMenu()">
+                      <md-icon md-menu-origin md-svg-icon="{{src + '/navigation/svg/production/ic_more_vert_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option1
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button>
+                            <md-icon md-menu-align-target md-svg-icon="{{src + '/content/svg/production/ic_forward_24px.svg'}}" aria-label="More" size="24"></md-icon>
+                            Option2
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                  </md-menu>
+              </div>
+              <div class="project-more">
+                 <p>More About Project 2</p>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+</section>

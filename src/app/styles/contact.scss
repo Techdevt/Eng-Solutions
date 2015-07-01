@@ -1,0 +1,62 @@
+@import 'include-media';
+
+section.main div.contact{
+	position: relative;
+	background: #fafafa;
+
+	.section-header{
+		margin: 0;
+		.heading-2{
+			text-transform: uppercase;
+			text-align: left !important;
+		}
+
+		@include media('>=768px'){
+			margin-left: 3%;
+		}
+	}
+	
+
+	div.contact-container{
+		padding-bottom: 64px;
+		.gps-location{
+			padding-bottom: 30%;
+			
+			@include media('<=768px'){
+				padding-bottom: calc(30vh);
+			}
+
+			@include media('>768px'){
+				padding-bottom: calc(45vh);
+			}
+		}
+
+
+		.contact-form-wrapper{
+			background: #FFF;
+			.contact-form{
+				width: auto;
+
+				@include media('<=768px'){
+					height: calc(30vh);
+					margin-top: 8px;
+				}
+
+				@include media('>768px'){
+					height: calc(45vh);
+				}
+
+				form > md-content{
+				 background: #fff;
+				}
+			}
+		}
+		
+
+		.gps-location{
+			background: url('../assets/images/location.jpg') center 40% no-repeat;
+			background-size: cover !important;
+			background-color: #fafafa;
+		}
+	}
+}
